@@ -1,0 +1,25 @@
+# Render Blueprint — deploy backend from repo root:
+# Dashboard → New → Blueprint → connect GitHub repo
+#
+# After deploy, set CORS_ORIGINS to your Vercel frontend URL, e.g.:
+#   https://your-app.vercel.app
+# Optional: add http://localhost:3000 for local dev
+
+services:
+  - type: web
+    name: fireflies-api
+    runtime: python
+    plan: free
+    rootDir: backend
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.12.7"
+      - key: DATABASE_URL
+        value: sqlite:///./fireflies.db
+      - key: CORS_ORIGINS
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
