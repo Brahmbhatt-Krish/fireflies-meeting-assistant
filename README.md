@@ -10,8 +10,8 @@ Built as an **SDE Fullstack Assignment**. Real speech-to-text is out of scope â€
 
 | | Link |
 |---|---|
-| **Live application** | _Add your Vercel URL after deploy_ |
-| **GitHub repository** | _Add your public repo URL_ |
+| **Live application** | [_URL ](https://fireflies-meeting-assistant.vercel.app/) |
+| **GitHub repository** | [_URL_](https://github.com/Brahmbhatt-Krish/fireflies-meeting-assistant) |
 
 See **[DEPLOY.md](./DEPLOY.md)** for step-by-step hosting on Vercel (frontend) and Render (backend).
 
